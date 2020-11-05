@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<SplitPane dividerPositions="0.8296593186372746" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.231" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.Controller">
+    <items>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+            <children>
+                <TabPane prefHeight="398.0" prefWidth="410.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <tabs>
+                        <Tab fx:id="tabApproximation" text="Approximation">
+                            <content>
+                                <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                    <children>
+                                        <SplitPane dividerPositions="0.5" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" orientation="VERTICAL" prefHeight="200.0" prefWidth="474.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                            <items>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                                    <children>
+                                                        <LineChart fx:id="graphMethodsChart" createSymbols="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                            <xAxis>
+                                                                <NumberAxis label="x" side="BOTTOM" />
+                                                            </xAxis>
+                                                            <yAxis>
+                                                                <NumberAxis label="y" side="LEFT" />
+                                                            </yAxis>
+                                                        </LineChart>
+                                                    </children>
+                                                </AnchorPane>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                                    <children>
+                                                        <TabPane prefHeight="270.0" prefWidth="474.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                            <tabs>
+                                                                <Tab text="GTE">
+                                                                    <content>
+                                                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                                            <children>
+                                                                                <LineChart fx:id="GTEChart" createSymbols="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="1000.0" prefWidth="1000.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                                                    <xAxis>
+                                                                                        <NumberAxis label="x" side="BOTTOM" />
+                                                                                    </xAxis>
+                                                                                    <yAxis>
+                                                                                        <NumberAxis label="E" side="LEFT" />
+                                                                                    </yAxis>
+                                                                                </LineChart>
+                                                                            </children>
+                                                                        </AnchorPane>
+                                                                    </content>
+                                                                </Tab>
+                                                                <Tab text="LTE">
+                                                                    <content>
+                                                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                                            <children>
+                                                                                <LineChart fx:id="LTEChart" createSymbols="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="1000.0" prefWidth="1000.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                                                    <xAxis>
+                                                                                        <NumberAxis label="x" side="BOTTOM" />
+                                                                                    </xAxis>
+                                                                                    <yAxis>
+                                                                                        <NumberAxis label="E" side="LEFT" />
+                                                                                    </yAxis>
+                                                                                </LineChart>
+                                                                            </children>
+                                                                        </AnchorPane>
+                                                                    </content>
+                                                                </Tab>
+                                                            </tabs>
+                                                        </TabPane>
+                                                    </children>
+                                                </AnchorPane>
+                                            </items>
+                                        </SplitPane>
+                                    </children>
+                                </AnchorPane>
+                            </content>
+                        </Tab>
+                        <Tab fx:id="tabTotalError" text="Total Approximation Error">
+                            <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                    <children>
+                                        <VBox prefHeight="366.0" prefWidth="410.0" AnchorPane.bottomAnchor="-1.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                            <children>
+                                                <LineChart fx:id="totalErrorChart" createSymbols="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="1000.0" prefWidth="1000.0">
+                                                    <xAxis>
+                                                        <NumberAxis label="n" side="BOTTOM" />
+                                                    </xAxis>
+                                                    <yAxis>
+                                                        <NumberAxis label="E" side="LEFT" />
+                                                    </yAxis>
+                                                </LineChart>
+                                            </children>
+                                        </VBox>
+                                    </children>
+                                </AnchorPane>
+                            </content>
+                        </Tab>
+                    </tabs>
+                </TabPane>
+            </children>
+        </AnchorPane>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="398.0" prefWidth="31.0">
+            <children>
+                <VBox prefHeight="577.0" prefWidth="170.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <children>
+                        <Label text="y' = 2x+y−3">
+                            <VBox.margin>
+                                <Insets left="5.0" top="15.0" />
+                            </VBox.margin>
+                            <font>
+                                <Font size="15.0" />
+                            </font>
+                        </Label>
+                        <Label text="x0">
+                            <VBox.margin>
+                                <Insets left="5.0" top="15.0" />
+                            </VBox.margin>
+                        </Label>
+                        <TextField text="1" fx:id="x0">
+                            <VBox.margin>
+                                <Insets left="5.0" right="5.0" />
+                            </VBox.margin>
+                        </TextField>
+                        <Label text="y0">
+                            <VBox.margin>
+                                <Insets left="5.0" top="10.0" />
+                            </VBox.margin>
+                        </Label>
+                        <TextField fx:id="y0" text="1">
+                            <VBox.margin>
+                                <Insets left="5.0" right="5.0" />
+                            </VBox.margin>
+                        </TextField>
+                        <Label text="X">
+                            <VBox.margin>
+                                <Insets left="5.0" top="10.0" />
+                            </VBox.margin>
+                        </Label>
+                        <TextField fx:id="X" text="7">
+                            <VBox.margin>
+                                <Insets left="5.0" right="5.0" />
+                            </VBox.margin>
+                        </TextField>
+                        <Label layoutX="15.0" layoutY="133.0" text="n0">
+                            <VBox.margin>
+                                <Insets left="5.0" top="10.0" />
+                            </VBox.margin>
+                        </Label>
+                        <TextField fx:id="n0" layoutX="15.0" layoutY="150.0" promptText="starting number of grid cells" text="10">
+                            <VBox.margin>
+                                <Insets left="5.0" right="5.0" />
+                            </VBox.margin>
+                        </TextField>
+                        <Label layoutX="15.0" layoutY="187.0" text="N">
+                            <VBox.margin>
+                                <Insets left="5.0" top="10.0" />
+                            </VBox.margin>
+                        </Label>
+                        <TextField fx:id="N" layoutX="15.0" layoutY="204.0" promptText="number of grid cells" text="50">
+                            <VBox.margin>
+                                <Insets left="5.0" right="5.0" />
+                            </VBox.margin>
+                        </TextField>
+                        <Button fx:id="plot_btn" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#plotCharts" prefHeight="27.0" prefWidth="140.0" text="Plot">
+                            <VBox.margin>
+                                <Insets left="5.0" right="5.0" top="10.0" />
+                            </VBox.margin>
+                        </Button>
+                        <Label text="Show plots">
+                            <VBox.margin>
+                                <Insets left="5.0" top="20.0" />
+                            </VBox.margin>
+                        </Label>
+                        <CheckBox fx:id="euler_checkbox" layoutX="15.0" layoutY="359.0" mnemonicParsing="false" onAction="#changeVisibilityEulerMethod" selected="true" text="Euler’s method">
+                            <VBox.margin>
+                                <Insets left="5.0" top="5.0" />
+                            </VBox.margin>
+                        </CheckBox>
+                        <CheckBox fx:id="improved_euler_checkbox" layoutX="15.0" layoutY="377.0" mnemonicParsing="false" onAction="#changeVisibilityImprovedEulerMethod" selected="true" text="Improved Euler’s method">
+                            <VBox.margin>
+                                <Insets left="5.0" top="5.0" />
+                            </VBox.margin>
+                        </CheckBox>
+                        <CheckBox fx:id="runge_kutta_checkbox" layoutX="15.0" layoutY="394.0" mnemonicParsing="false" onAction="#changeVisibilityRungeKuttaMethod" selected="true" text="Runge-Kutta method">
+                            <VBox.margin>
+                                <Insets left="5.0" top="5.0" />
+                            </VBox.margin>
+                        </CheckBox>
+                    </children>
+                </VBox>
+            </children>
+        </AnchorPane>
+    </items>
+</SplitPane>
