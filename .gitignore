@@ -162,3 +162,7 @@ DE_Innopolis.iml
 DE_Innopolis.iml
 DE_Innopolis.iml
 *.iml
+.DS_Store
+._.DS_Store
+**/.DS_Store
+**/._.DS_Store
